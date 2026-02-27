@@ -18,13 +18,6 @@ A collection of security projects, CTF write-ups, and tools I've built or contri
 
 ---
 
-## CTF Write-ups
-
-<!-- Add CTF write-ups here -->
-
-*Coming soon...*
-
----
 
 ## Research & Articles
 
