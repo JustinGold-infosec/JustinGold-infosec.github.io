@@ -27,7 +27,6 @@ I specialize in the defensive aspects of cybersecurity. Whether it be hardening 
 
 ## Let's Connect
 
-- [GitHub](https://github.com/JustinGold-infosec)
 - [LinkedIn](https://www.linkedin.com/in/justinit/)
 - [Youtube](https://www.youtube.com/@jgold96)<!-- Add your LinkedIn URL -->
 
