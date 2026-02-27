@@ -6,7 +6,7 @@ permalink: /about/
 
 # About Me
 
-I'm a cybersecurity professional passionate about defending digital infrastructure and staying one step ahead of emerging threats.
+Cybersecurity Professional with a passion for securing the future, and obsession with the intergration of technology in facets everyday life.
 
 ## Background
 
@@ -15,7 +15,9 @@ I'm a cybersecurity professional passionate about defending digital infrastructu
 Coming soon...
 
 ## Certifications
-
+- Data Anyltics - The Learning Resourses Network (LERN)
+- Power BI - The Learning Resourses Network (LERN)
+- Security+ 601 - Expired March 2025
 <!-- List your certs here, for example: -->
 <!-- - CISSP -->
 <!-- - CEH -->
@@ -30,7 +32,6 @@ When I'm not hunting threats or hardening systems, you'll find me:
 
 - 🎮 Gaming
 - 🎵 Listening to music
-- 🐕 Spending time with my dog
 - 🏈 Watching sports
 - 💰 Following the crypto space
 
@@ -38,4 +39,4 @@ When I'm not hunting threats or hardening systems, you'll find me:
 
 ## Contact
 
-The best way to reach me is through [LinkedIn](#) or [GitHub](https://github.com/JustinGold-infosec).
+The best way to reach me is through [LinkedIn](https://www.linkedin.com/in/justinit/) or [GitHub](https://github.com/JustinGold-infosec).
