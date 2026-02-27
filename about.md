@@ -13,6 +13,13 @@ Cybersecurity Professional with a passion for securing the future, and obsession
 
  At Barricade Cyber Solutions, I worked directly in threat monitoring, incident response, and DFIR services while building daily KPI reporting for clients. At JMWSC, I stood up various IT security functions for a water utility — building a security awareness program from scratch, creating real-time OT and IT reporting dashboards in Power BI, and serving as the primary technical point of contact across MSP, OT, and third-party vendor relationships. I've seen firsthand how operational technology environments work, where they're vulnerable, and why bridging the IT/OT security gap matters.
 
+# Areas of Focus
+
+- **Security Architecture & Hardening**
+- **Security Awareness & Training**
+- **Threat Analysis & Intelligence**
+- **Data Analysis & Reporting**
+
 ## Certifications
 - Security+ SY0-601 - Expired March 2025
 
