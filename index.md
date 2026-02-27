@@ -5,31 +5,31 @@ title: Home
 
 # Hey, I'm Justin Gold
 
-**Cybersecurity Professional** protecting digital assets and building secure systems.
+**Cybersecurity Professional** with a passion for securing the future, and obsession with the intergration of technology in facets everyday life.
+
 
 ---
 
 ## What I Do
 
-I specialize in identifying vulnerabilities, hardening defenses, and helping organizations stay ahead of threats. Whether it's penetration testing, security architecture, or incident response – I'm focused on keeping systems and data safe.
+I specialize in the defensive aspects of cybersecurity. Whether it be hardening systems, managing risk, or ensuring organizations stay aligned with the frameworks that matter.
 
 ---
 
 ## Areas of Focus
 
-- **Threat Analysis & Intelligence**
-- **Penetration Testing & Vulnerability Assessment**
 - **Security Architecture & Hardening**
-- **Incident Response & Forensics**
 - **Security Awareness & Training**
-
+- **Threat Analysis & Intelligence**
+- **Data Analysis & Reporting**
 ---
 
 ## Let's Connect
 
 - [GitHub](https://github.com/JustinGold-infosec)
-- [LinkedIn](#) <!-- Add your LinkedIn URL -->
+- [LinkedIn](https://www.linkedin.com/in/justinit/)
+- [Youtube](https://www.youtube.com/@jgold96))<!-- Add your LinkedIn URL -->
 
 ---
 
-*"The only truly secure system is one that is powered off, cast in a block of concrete, and sealed in a lead-lined room with armed guards."* – Gene Spafford
+**In todays world, a focus on preparing for the issues of tomorrow is what separates secure organizations from becoming headlines.**
