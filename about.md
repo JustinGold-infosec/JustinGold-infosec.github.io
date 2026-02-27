@@ -6,12 +6,12 @@ permalink: /about/
 
 # About Me
 
-Cybersecurity Professional with a passion for securing the future, and obsession with the intergration of technology in facets everyday life.
+Cybersecurity Professional with a passion for securing the future, and obsession with the intergration of technology in facets of everyday life.
 
 ## Background
- Cybersecurity professional with hands-on experience in SOC operations, incident response, digital forensics, and security program implementation. I bring a non-traditional path into cyber starting in operations and IT infrastructure before moving into a dedicated security role which gives me a practical, operations-first approach to defending environments.
+ Hands-on experience in SOC operations, incident response, digital forensics, and security program implementation. I bring a non-traditional path into cyber starting in operations and IT infrastructure before moving into a dedicated security role which gives me a practical, operations-first approach to defending environments.
 
- At Barricade Cyber Solutions, I worked directly in threat monitoring, incident response, and DFIR services while building daily KPI reporting for clients. At JMWSC, I stood up various IT security functions for a water utility — building a security awareness program from scratch, creating real-time OT and IT reporting dashboards in Power BI, and serving as the primary technical point of contact across MSP, OT, and third-party vendor relationships. I've seen firsthand how operational technology environments work, where they're vulnerable, and why bridging the IT/OT security gap matters.
+ At Barricade Cyber Solutions, I worked directly in threat monitoring, incident response, and DFIR services while building daily KPI reporting for clients. At JMWSC, I stood up various IT security functions for a water utility, built a security awareness program from scratch, created real-time OT and IT reporting dashboards in Power BI, and served as the primary technical point of contact across MSP, OT, and third-party vendor relationships. I've seen firsthand how operational technology environments work, where they're vulnerable, and why bridging the IT/OT security gap matters.
 
 # Areas of Focus
 
