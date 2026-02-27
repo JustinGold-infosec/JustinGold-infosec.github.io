@@ -13,14 +13,6 @@ Cybersecurity Professional with a passion for securing the future, and obsession
 
  At Barricade Cyber Solutions, I worked directly in threat monitoring, incident response, and DFIR services while building daily KPI reporting for clients. At JMWSC, I stood up various IT security functions for a water utility — building a security awareness program from scratch, creating real-time OT and IT reporting dashboards in Power BI, and serving as the primary technical point of contact across MSP, OT, and third-party vendor relationships. I've seen firsthand how operational technology environments work, where they're vulnerable, and why bridging the IT/OT security gap matters.
 
-Active moderator for both [Simply Cyber](https://www.simplycyber.io/) and [Hack Smarter](https://www.hacksmarter.org/catalog)
-- Youtube Links [Simply Cyber](https://www.youtube.com/@SimplyCyber) and [Hack Smarter](https://www.youtube.com/@TylerRamsbey)
-- Discord links [Simply Cyber](https://discord.com/invite/simplycyber) and [Hack Smarter](https://discord.com/invite/wWDT4ST5CH)
-
-<!-- Add your background here - education, how you got into security, etc. -->
-
-Coming soon...
-
 ## Certifications
 - Security+ SY0-601 - Expired March 2025
 
@@ -49,3 +41,8 @@ When I'm not hunting threats or hardening systems, you'll find me:
 ## Contact
 
 The best way to reach me is through [LinkedIn](https://www.linkedin.com/in/justinit/) or [GitHub](https://github.com/JustinGold-infosec).
+
+
+**Active moderator for both [Simply Cyber](https://www.simplycyber.io/) and [Hack Smarter](https://www.hacksmarter.org/catalog)**
+- Youtube Links [Simply Cyber](https://www.youtube.com/@SimplyCyber) and [Hack Smarter](https://www.youtube.com/@TylerRamsbey)
+- Discord links [Simply Cyber](https://discord.com/invite/simplycyber) and [Hack Smarter](https://discord.com/invite/wWDT4ST5CH)
