@@ -20,11 +20,6 @@ Cybersecurity Professional with a passion for securing the future, and obsession
 - Data Anyltics - The Learning Resourses Network (LERN) 4.8 CEUs
 - Power BI - The Learning Resourses Network (LERN) 9.6 CEUs
 - Network Threat Analysis - Cybersecurity Defense Initiative (CDI) 2.4 CEUs
-<!-- List your certs here, for example: -->
-<!-- - CISSP -->
-<!-- - CEH -->
-<!-- - Security+ -->
-<!-- - OSCP -->
 
 ## Beyond Security
 
@@ -40,8 +35,7 @@ When I'm not hunting threats or hardening systems, you'll find me:
 
 ## Contact
 
-The best way to reach me is through [LinkedIn](https://www.linkedin.com/in/justinit/) or [GitHub](https://github.com/JustinGold-infosec).
-
+Reach out to me on [LinkedIn](https://www.linkedin.com/in/justinit/)
 
 **Active moderator for both [Simply Cyber](https://www.simplycyber.io/) and [Hack Smarter](https://www.hacksmarter.org/catalog)**
 - Youtube Links [Simply Cyber](https://www.youtube.com/@SimplyCyber) and [Hack Smarter](https://www.youtube.com/@TylerRamsbey)
