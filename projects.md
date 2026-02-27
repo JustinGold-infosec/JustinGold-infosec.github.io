@@ -6,7 +6,7 @@ permalink: /projects/
 
 # Projects & Write-ups
 
-A collection of security projects, CTF write-ups, and tools I've built or contributed to.
+A collection of security projects, write-ups, and tools I've built or contributed to.
 
 ---
 
