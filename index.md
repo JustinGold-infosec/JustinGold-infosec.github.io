@@ -22,6 +22,7 @@ I specialize in the defensive aspects of cybersecurity. Whether it be hardening 
 - **Security Awareness & Training**
 - **Threat Analysis & Intelligence**
 - **Data Analysis & Reporting**
+
 ---
 
 ## Let's Connect
