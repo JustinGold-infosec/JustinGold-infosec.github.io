@@ -16,15 +16,6 @@ I specialize in the defensive aspects of cybersecurity. Whether it be hardening 
 
 ---
 
-## Areas of Focus
-
-- **Security Architecture & Hardening**
-- **Security Awareness & Training**
-- **Threat Analysis & Intelligence**
-- **Data Analysis & Reporting**
-
----
-
 ## Let's Connect
 
 - [LinkedIn](https://www.linkedin.com/in/justinit/)
