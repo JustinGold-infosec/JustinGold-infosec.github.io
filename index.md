@@ -28,8 +28,8 @@ I specialize in the defensive aspects of cybersecurity. Whether it be hardening 
 
 - [GitHub](https://github.com/JustinGold-infosec)
 - [LinkedIn](https://www.linkedin.com/in/justinit/)
-- [Youtube](https://www.youtube.com/@jgold96))<!-- Add your LinkedIn URL -->
+- [Youtube](https://www.youtube.com/@jgold96)<!-- Add your LinkedIn URL -->
 
 ---
 
-**In todays world, a focus on preparing for the issues of tomorrow is what separates secure organizations from becoming headlines.**
+**In today's world a focus on preparing for the issues of tomorrow is what separates secure organizations from becoming headlines.**
