@@ -15,16 +15,17 @@ Cybersecurity Professional with a passion for securing the future, and obsession
 Coming soon...
 
 ## Certifications
+- Security+ SY0-601 - Expired March 2025
+
+## Coursework
 - Data Anyltics - The Learning Resourses Network (LERN)
 - Power BI - The Learning Resourses Network (LERN)
-- Security+ 601 - Expired March 2025
+- Network Threat Analysis - Cybersecurity Defense Initiative (CDI)
 <!-- List your certs here, for example: -->
 <!-- - CISSP -->
 <!-- - CEH -->
 <!-- - Security+ -->
 <!-- - OSCP -->
-
-Coming soon...
 
 ## Beyond Security
 
