@@ -7,7 +7,6 @@ baseurl: "" # leave empty for user/org pages
 url: "https://JustinGold-infosec.github.io"
 
 # Build settings
-theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
