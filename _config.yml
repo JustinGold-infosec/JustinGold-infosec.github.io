@@ -1,0 +1,26 @@
+# Site Settings
+title: Justin Gold | Cybersecurity Professional
+description: >-
+  Cybersecurity professional focused on protecting digital assets 
+  and building secure systems.
+baseurl: "" # leave empty for user/org pages
+url: "https://JustinGold-infosec.github.io"
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Author info
+author:
+  name: Justin Gold
+  email: # your email (optional)
+  linkedin: # your linkedin username (optional)
+  github: JustinGold-infosec
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
