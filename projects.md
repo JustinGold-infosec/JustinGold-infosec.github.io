@@ -27,4 +27,4 @@ A collection of security projects, write-ups, and tools I've built or contribute
 
 ---
 
-*Check back soon or follow me on [GitHub](https://github.com/JustinGold-infosec) for updates.*
+*Check back soon or follow me on [Linkedin](https://www.linkedin.com/in/justinit/) for updates.*
