@@ -15,11 +15,9 @@ I specialize in the defensive aspects of cybersecurity. Whether it be hardening 
 
 ## Let's Connect
 
-- [LinkedIn](https://www.linkedin.com/in/justinit/)
-- [Youtube](https://www.youtube.com/@jgold96)<!-- Add your LinkedIn URL -->
-
-<a href="https://www.linkedin.com/in/justinit/" class="btn">LinkedIn</a>
+<a href="https://www.linkedin.com/in/justinit/" class="btn btn-outline">LinkedIn</a>
 <a href="https://www.youtube.com/@jgold96" class="btn btn-outline">YouTube</a>
+
 ---
 
 **In today's world, a focus on preparing for the issues of tomorrow is what separates secure organizations from becoming headlines.**
