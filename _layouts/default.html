@@ -519,6 +519,68 @@
       font-style: italic;
     }
 
+    /* Back Link Styles - Three Options */
+    
+    /* Option A: Pill button */
+    .back-link-pill {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      padding: 0.5rem 1rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      transition: all var(--transition-speed);
+    }
+
+    .back-link-pill:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg-primary);
+      text-decoration: none;
+    }
+
+    /* Option B: Solid button */
+    .back-link-solid {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      padding: 0.6rem 1.25rem;
+      background: var(--accent);
+      border-radius: 8px;
+      color: var(--bg-primary);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all var(--transition-speed);
+    }
+
+    .back-link-solid:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    /* Option C: Outline button */
+    .back-link-outline {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      padding: 0.5rem 1rem;
+      background: transparent;
+      border: 2px solid var(--accent);
+      border-radius: 8px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all var(--transition-speed);
+    }
+
+    .back-link-outline:hover {
+      background: var(--accent);
+      color: var(--bg-primary);
+      text-decoration: none;
+    }
+
+    /* Default back-link (keeping original for fallback) */
     .back-link {
       display: inline-block;
       margin-bottom: 1.5rem;
@@ -536,7 +598,7 @@
       padding: 1.5rem;
       background: var(--bg-secondary);
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 8px;
     }
 
     .post-header h1 {
@@ -625,5 +687,4 @@
     });
   </script>
 </body>
-</html>
 </html>
