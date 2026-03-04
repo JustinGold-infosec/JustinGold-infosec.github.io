@@ -522,7 +522,6 @@
     /* Back Link - Pill Style */
     .back-link-pill {
       display: inline-block;
-      margin-bottom: 1.5rem;
       padding: 0.5rem 1rem;
       background: var(--bg-tertiary);
       border: 1px solid var(--border);
@@ -537,6 +536,37 @@
       border-color: var(--accent);
       color: var(--bg-primary);
       text-decoration: none;
+    }
+
+    /* Post Layout with Sticky Sidebar */
+    .post-layout {
+      display: flex;
+      gap: 2rem;
+      position: relative;
+    }
+
+    .post-sidebar {
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+      flex-shrink: 0;
+    }
+
+    .post-main {
+      flex: 1;
+      min-width: 0;
+    }
+
+    @media (max-width: 900px) {
+      .post-layout {
+        flex-direction: column;
+      }
+
+      .post-sidebar {
+        position: relative;
+        top: 0;
+        margin-bottom: 1rem;
+      }
     }
 
     /* Single Post Styles */
