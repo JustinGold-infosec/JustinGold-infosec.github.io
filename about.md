@@ -10,6 +10,8 @@ permalink: /about/
 
 Cybersecurity Professional with a passion for securing the future, and obsession with the intergration of technology in facets of everyday life.
 
+
+
 ## Background
  Hands-on experience in SOC operations, incident response, digital forensics, and security program implementation. I bring a non-traditional path into cyber starting in operations and IT infrastructure before moving into a dedicated security role which gives me a practical, operations-first approach to defending environments.
 
