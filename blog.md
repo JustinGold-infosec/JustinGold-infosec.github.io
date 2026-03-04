@@ -30,14 +30,14 @@ permalink: /blog/
 
 <div class="posts-list">
   {% for post in site.posts %}
-    <article class="post-card">
+    <a href="{{ post.url | relative_url }}" class="post-card">
       <div class="post-meta">
         <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
         {% if post.category %}
           <span class="post-category">{{ post.category }}</span>
         {% endif %}
       </div>
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <h2>{{ post.title }}</h2>
       <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
       {% if post.tags.size > 0 %}
       <div class="post-tags">
@@ -46,7 +46,7 @@ permalink: /blog/
         {% endfor %}
       </div>
       {% endif %}
-    </article>
+    </a>
   {% endfor %}
 </div>
 
