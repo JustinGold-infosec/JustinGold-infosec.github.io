@@ -4,6 +4,8 @@ title: About
 permalink: /about/
 ---
 
+<img src="/assets/images/your-photo.jpg" alt="Justin Gold" style="width: 200px; border-radius: 50%; display: block; margin: 0 auto;">
+
 # About Me
 
 Cybersecurity Professional with a passion for securing the future, and obsession with the intergration of technology in facets of everyday life.
