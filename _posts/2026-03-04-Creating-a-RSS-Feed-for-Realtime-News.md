@@ -1,24 +1,46 @@
 ---
 layout: post
-title: "Getting Started with Home Lab Security Monitoring"
+title: "Creating an RSS Feed for Realtime News"
 date: 2026-03-03
 category: Cybersecurity
-tags: [homelab, monitoring, blueteam, tutorial]
+tags: [monitoring, tutorial]
 ---
 
-Building a home lab is one of the best investments you can make in your cybersecurity career. In this post, I'll walk through my current setup and some lessons learned along the way.
+## Example Cybersecurity News Feed
 
-## Why a Home Lab?
+A custom RSS aggregator pulling the latest from top cybersecurity sources. Built using [RSS.app](https://rss.app) to stay current with industry news and threats.
 
-Having your own environment to break things, test tools, and experiment is invaluable. You can't truly understand defense without understanding offense, and a home lab gives you the freedom to explore both.
+<div class="news-feed-container">
+  <rssapp-carousel id="_AZk965oqAw6Po0xe"></rssapp-carousel>
+  <script src="https://widget.rss.app/v1/carousel.js" type="text/javascript" async></script>
+</div>
 
-## My Current Setup
+## Why Create a Realtime Feed?
 
-I'm running a mix of virtual machines and containers, with a focus on:
+Create tailored feeds and use them to stay up to date on various topics.
 
-- SIEM deployment and log analysis
-- Network traffic monitoring
-- Vulnerability scanning
-- Malware analysis (isolated!)
+## Step 1: Create Your RSS Feed Widget
 
-More detailed writeups on each component coming soon.
+Go to [rss.app](https://rss.app/) and create a free account
+Click "New Feed" and add RSS URLs for the news you want. Here are some good ones:
+
+Cybersecurity:
+
+https://krebsonsecurity.com/feed/
+https://www.bleepingcomputer.com/feed/
+https://feeds.feedburner.com/TheHackersNews
+https://www.darkreading.com/rss.xml
+
+Crypto:
+
+https://www.coindesk.com/arc/outboundfeeds/rss/
+https://decrypt.co/feed
+
+Tech:
+
+https://feeds.arstechnica.com/arstechnica/technology-lab
+https://www.wired.com/feed/rss
+
+
+Customize the widget appearance (dark background to match your theme)
+Copy the embed code they give you
