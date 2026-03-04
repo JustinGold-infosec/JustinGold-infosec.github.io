@@ -8,7 +8,9 @@ tags: [monitoring, tutorial]
 
 ## Example Cybersecurity News Feed
 
-A custom RSS aggregator pulling the latest from top cybersecurity sources. Built using [RSS.app](https://rss.app) to stay current with industry news and threats.
+A custom RSS aggregator pulling the latest from top cybersecurity sources. Built using [RSS.app](https://rss.app) to stay current with industry news.
+
+- Just a heads up, a decent amount of the functionality and customization on this example is locked behind a monthly subscription.
 
 <div class="news-feed-container">
   <rssapp-carousel id="_AZk965oqAw6Po0xe"></rssapp-carousel>
@@ -19,28 +21,47 @@ A custom RSS aggregator pulling the latest from top cybersecurity sources. Built
 
 Create tailored feeds and use them to stay up to date on various topics.
 
-## Step 1: Create Your RSS Feed Widget
+## Step 1: Create Your RSS Feeds
 
-Go to [rss.app](https://rss.app/) and create a free account
-Click "New Feed" and add RSS URLs for the news you want. Here are some good ones:
+Go to [rss.app](https://rss.app/) and create a free account.
 
-Cybersecurity:
+- You can just use your Gmail/Google to sign up if you wish.
 
-https://krebsonsecurity.com/feed/
-https://www.bleepingcomputer.com/feed/
-https://feeds.feedburner.com/TheHackersNews
-https://www.darkreading.com/rss.xml
+Click "New Feed" and add RSS URLs for the news you want or just use the "Topics" option to automatically aggregate sources.
 
-Crypto:
+Here are some good specific URLs to get you started:
 
-https://www.coindesk.com/arc/outboundfeeds/rss/
-https://decrypt.co/feed
+**Cybersecurity:**
+- https://krebsonsecurity.com/feed/
+- https://www.bleepingcomputer.com/feed/
+- https://feeds.feedburner.com/TheHackersNews
+- https://www.darkreading.com/rss.xml
 
-Tech:
+**Crypto:**
+- https://www.coindesk.com/arc/outboundfeeds/rss/
+- https://decrypt.co/feed
 
-https://feeds.arstechnica.com/arstechnica/technology-lab
-https://www.wired.com/feed/rss
+**Tech:**
+- https://feeds.arstechnica.com/arstechnica/technology-lab
+- https://www.wired.com/feed/rss
 
+## Create a Bundle
 
-Customize the widget appearance (dark background to match your theme)
-Copy the embed code they give you
+Click "Bundles" > "+ New Bundle"
+
+- Select the feeds you just created.
+
+## Step 2: Create The Widget
+
+Navigate to the feed or bundle you just created, tab into "Widgets"
+
+Customize the widget appearance:
+- News wall
+- List
+- Carousel
+- Imageboard
+- Ticker
+
+When finished click the "</> Add to Website" button.
+
+Copy the embed code they give you into your website as you wish!
