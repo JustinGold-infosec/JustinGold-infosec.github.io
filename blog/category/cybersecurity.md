@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Cybersecurity
+title: "Cybersecurity"
 category: Cybersecurity
 permalink: /blog/category/cybersecurity/
 ---

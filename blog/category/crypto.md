@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Crypto
+title: "Crypto"
 category: Crypto
 permalink: /blog/category/crypto/
 ---

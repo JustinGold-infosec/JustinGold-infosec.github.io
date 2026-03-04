@@ -15,6 +15,7 @@ Having your own environment to break things, test tools, and experiment is inval
 ## My Current Setup
 
 I'm running a mix of virtual machines and containers, with a focus on:
+
 - SIEM deployment and log analysis
 - Network traffic monitoring
 - Vulnerability scanning

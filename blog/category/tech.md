@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Tech
+title: "Tech"
 category: Tech
 permalink: /blog/category/tech/
 ---

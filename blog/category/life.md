@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Life
+title: "Life"
 category: Life
 permalink: /blog/category/life/
 ---

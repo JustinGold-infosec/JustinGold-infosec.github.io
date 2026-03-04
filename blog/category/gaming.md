@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Gaming
+title: "Gaming"
 category: Gaming
 permalink: /blog/category/gaming/
 ---

@@ -367,6 +367,179 @@
         margin: 0.5rem 0;
       }
     }
+
+    /* ===== Blog Styles ===== */
+    .blog-intro {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-filters {
+      margin: 1.5rem 0;
+      padding: 1.25rem;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+
+    .filter-section {
+      margin-bottom: 0.75rem;
+    }
+
+    .filter-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .filter-label {
+      display: inline-block;
+      margin-right: 0.5rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .filter-tag {
+      display: inline-block;
+      padding: 0.25rem 0.65rem;
+      margin: 0.2rem;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.8rem;
+      transition: all var(--transition-speed);
+    }
+
+    .filter-tag:hover,
+    .filter-tag.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg-primary);
+      text-decoration: none;
+    }
+
+    .posts-list {
+      margin-top: 1.5rem;
+    }
+
+    .post-card {
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      transition: border-color var(--transition-speed), transform var(--transition-speed);
+    }
+
+    .post-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .post-date {
+      color: var(--text-muted);
+    }
+
+    .post-category {
+      padding: 0.15rem 0.5rem;
+      background: var(--accent);
+      border-radius: 4px;
+      color: var(--bg-primary);
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .post-card h2 {
+      margin: 0 0 0.5rem 0;
+      padding: 0;
+      border: none;
+      font-size: 1.25rem;
+    }
+
+    .post-card h2 a {
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+
+    .post-card h2 a:hover {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .post-excerpt {
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+      line-height: 1.5;
+    }
+
+    .post-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      padding: 0.15rem 0.45rem;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      color: var(--accent);
+      font-size: 0.75rem;
+    }
+
+    .no-posts {
+      text-align: center;
+      color: var(--text-muted);
+      padding: 3rem;
+      font-style: italic;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .back-link:hover {
+      color: var(--accent);
+    }
+
+    /* Single Post Styles */
+    .post-header {
+      margin-bottom: 2rem;
+    }
+
+    .post-header h1 {
+      margin-bottom: 0.75rem;
+    }
+
+    .post-content {
+      line-height: 1.8;
+    }
+
+    .post-content h2 {
+      margin-top: 2rem;
+    }
+
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
   </style>
 </head>
 <body>
@@ -377,6 +550,7 @@
         <li><a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>Home</a></li>
         <li><a href="{{ '/about/' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>About</a></li>
         <li><a href="{{ '/projects/' | relative_url }}" {% if page.url == '/projects/' %}class="active"{% endif %}>Projects</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog' %}class="active"{% endif %}>Blog</a></li>
         <li>
           <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
             <svg class="sun-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
