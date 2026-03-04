@@ -16,7 +16,6 @@
     })();
   </script>
 
-  
   <style>
     /* ===== CSS Variables for Theming ===== */
     :root {
@@ -564,8 +563,18 @@
       }
 
       .post-sidebar {
-        position: static;
-        margin-bottom: 1rem;
+        position: static !important;
+        top: auto !important;
+        height: auto;
+        order: 2;
+        margin-top: 2rem;
+        margin-bottom: 0;
+        padding-top: 1.5rem;
+        border-top: 1px solid var(--border);
+      }
+
+      .post-main {
+        order: 1;
       }
     }
 
