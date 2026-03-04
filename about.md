@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<img src="/assets/images/your-photo.jpg" alt="Justin Gold" style="width: 200px; border-radius: 50%; display: block; margin: 0 auto;">
+<img src="/assets/Images/Media/JgoldPFP.jpg" alt="Justin Gold" style="width: 200px; border-radius: 50%; display: block; margin: 0 auto;">
 
 # About Me
 
