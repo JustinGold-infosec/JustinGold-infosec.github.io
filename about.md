@@ -40,8 +40,6 @@ When I'm not hunting threats or hardening systems, you'll find me:
 - 📚 Diving into rabbit holes
 - 💰 Following the crypto space
 
----
-
 ## Contact
 
 Reach out to me on [LinkedIn](https://www.linkedin.com/in/justinit/)
