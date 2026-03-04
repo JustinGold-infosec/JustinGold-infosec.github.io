@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to My Blog"
-date: 2026-03-04
+date: 2026-03-03
 category: Life
 tags: [intro, personal]
 ---
