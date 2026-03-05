@@ -1,12 +1,10 @@
 ---
 layout: default
 ---
-
 <div class="post-layout">
   <aside class="post-sidebar">
     <a href="{{ '/blog/' | relative_url }}" class="back-link-pill">← Back to all posts</a>
   </aside>
-
   <article class="post-main">
     <header class="post-header">
       <h1>{{ page.title }}</h1>
@@ -16,9 +14,7 @@ layout: default
           <span class="post-category">{{ page.category }}</span>
         {% endif %}
       </div>
-      {% endif %}
     </header>
-
     <div class="post-content">
       {{ content }}
     </div>
