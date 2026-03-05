@@ -15,5 +15,3 @@ I specialize in the defensive aspects of cybersecurity. Whether it be hardening 
 ---
 
 **In today's world, a focus on preparing for the issues of tomorrow is what separates secure organizations from becoming headlines.**
-
----

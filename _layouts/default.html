@@ -77,14 +77,15 @@
     header {
       background-color: var(--bg-secondary);
       border-bottom: 1px solid var(--border);
-      padding: .2rem 2rem;
+      padding: 1rem 2rem;
+      position: sticky;
       top: 0;
       z-index: 1000;
       transition: background-color var(--transition-speed), border-color var(--transition-speed);
     }
 
     nav {
-      max-width: 950px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -163,7 +164,7 @@
 
     /* ===== Main Content ===== */
     main {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 3rem 2rem;
       width: 100%;
@@ -546,7 +547,7 @@
 
     .post-sidebar {
       position: sticky;
-      top: 30px;
+      top: 100px;
       height: fit-content;
       flex-shrink: 0;
     }
@@ -580,22 +581,22 @@
     /* About Page Layout */
     .about-layout {
       display: flex;
-      gap: 1rem;
+      gap: 2rem;
       position: relative;
     }
 
     .about-sidebar {
       position: sticky;
-      top: 30px;
+      top: 100px;
       height: fit-content;
       flex-shrink: 0;
     }
 
     .about-photo {
       width: 180px;
-      border: 8px solid var(--border);
-      border-radius: 50%;
-      box-shadow: 0 8px 20px var(--shadow);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px var(--shadow);
     }
 
     .about-main {
@@ -657,6 +658,61 @@
     /* Override RSS.app widget styles to match theme */
     .news-feed-container rssapp-carousel {
       --rss-radius: 8px;
+    }
+
+    /* ===== Community Cards ===== */
+    .community-cards {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .community-cards h2 {
+      margin-top: 0;
+      margin-bottom: 1.5rem;
+    }
+
+    .community-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .community-card {
+      display: block;
+      padding: 1.25rem;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      text-align: center;
+      transition: border-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    }
+
+    .community-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px var(--shadow);
+      text-decoration: none;
+    }
+
+    .community-logo {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .community-card h3 {
+      margin: 0;
+      color: var(--text-primary);
+      font-size: 1.1rem;
+      transition: color var(--transition-speed);
+    }
+
+    .community-card:hover h3 {
+      color: var(--accent);
     }
   </style>
 </head>
