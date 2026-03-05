@@ -636,16 +636,19 @@ layout: default
   let bootIndex = 0;
   const bootDelay = 350;
 
-  function showNextBootLine() {
+   function showNextBootLine() {
     if (bootIndex < bootLines.length) {
       bootLines[bootIndex].classList.add('visible');
+      document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
       bootIndex++;
       setTimeout(showNextBootLine, bootDelay);
     } else {
       setTimeout(() => {
         neofetch.classList.add('visible');
+        document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
         setTimeout(() => {
           interactive.classList.add('visible');
+          document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
         }, 500);
       }, 400);
     }
