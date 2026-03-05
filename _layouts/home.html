@@ -3,25 +3,25 @@ layout: default
 ---
 
 <style>
-  /* Terminal Embed Styles */
+  /* Terminal Embed Styles - Matched to site theme */
   .terminal-embed {
-    --term-bg-dark: #0a0a12;
-    --term-bg-monitor: #1a1a2e;
-    --term-bg-screen: #0d1020;
-    --term-bg-screen-inner: #080810;
-    --term-text-primary: #c8d4e8;
-    --term-text-secondary: #6a7a94;
-    --term-text-muted: #3d4a5c;
+    --term-bg-dark: #0d1117;
+    --term-bg-monitor: #161b22;
+    --term-bg-screen: #0d1117;
+    --term-bg-screen-inner: #0d1117;
+    --term-text-primary: #e6edf3;
+    --term-text-secondary: #8b949e;
+    --term-text-muted: #6e7681;
     --term-accent: #58a6ff;
-    --term-accent-bright: #7bb8ff;
-    --term-accent-dim: rgba(74, 158, 255, 0.3);
+    --term-accent-bright: #79b8ff;
+    --term-accent-dim: rgba(88, 166, 255, 0.3);
     --term-green: #3fb950;
     --term-yellow: #d29922;
     --term-purple: #a371f7;
-    --term-border-monitor: #2a2a45;
-    --term-border-inner: #1e1e35;
+    --term-border-monitor: #30363d;
+    --term-border-inner: #21262d;
     --term-glow-color: rgba(88, 166, 255, 0.4);
-    --term-scanline-color: rgba(0, 0, 0, 0.12);
+    --term-scanline-color: rgba(0, 0, 0, 0.08);
   }
 
   /* Import fonts */
@@ -33,12 +33,12 @@ layout: default
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    background: linear-gradient(145deg, #252540 0%, #1a1a2e 50%, #151525 100%);
+    background: linear-gradient(145deg, #21262d 0%, #161b22 50%, #0d1117 100%);
     border-radius: 24px;
     padding: 20px;
     box-shadow: 
-      0 0 0 2px #3a3a55,
-      0 0 0 4px #1a1a2e,
+      0 0 0 2px #30363d,
+      0 0 0 4px #161b22,
       0 20px 40px rgba(0, 0, 0, 0.5),
       0 0 80px rgba(88, 166, 255, 0.06),
       inset 0 2px 0 rgba(255, 255, 255, 0.05);
@@ -52,7 +52,7 @@ layout: default
     transform: translateX(-50%);
     width: 50px;
     height: 5px;
-    background: linear-gradient(90deg, transparent, #2a2a45, transparent);
+    background: linear-gradient(90deg, transparent, #30363d, transparent);
     border-radius: 3px;
   }
 
@@ -79,18 +79,18 @@ layout: default
     left: 25px;
     font-family: 'VT323', monospace;
     font-size: 0.8rem;
-    color: #3a3a55;
+    color: #6e7681;
     letter-spacing: 2px;
     text-transform: uppercase;
   }
 
   .screen-bezel {
-    background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+    background: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
     border-radius: 16px;
     padding: 12px;
     box-shadow: 
       inset 0 2px 8px rgba(0, 0, 0, 0.5),
-      inset 0 0 0 1px #2a2a45;
+      inset 0 0 0 1px #30363d;
   }
 
   .crt-screen {
@@ -351,7 +351,7 @@ layout: default
   .suggestions {
     margin-top: 1rem;
     padding: 0.75rem 1rem;
-    background: rgba(26, 26, 46, 0.6);
+    background: var(--term-bg-monitor);
     border-radius: 8px;
     border: 1px solid var(--term-border-monitor);
     box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.25);
@@ -472,14 +472,14 @@ layout: default
   }
 
   .footer-hint kbd {
-    background: var(--term-bg-monitor);
+    background: var(--term-border-inner);
     padding: 0.15rem 0.4rem;
     border-radius: 3px;
     border: 1px solid var(--term-border-monitor);
     font-family: 'VT323', monospace;
     font-size: 0.8rem;
     color: var(--term-accent);
-    box-shadow: 0 2px 0 var(--term-border-inner);
+    box-shadow: 0 2px 0 var(--term-bg-dark);
   }
 
   /* Responsive */
