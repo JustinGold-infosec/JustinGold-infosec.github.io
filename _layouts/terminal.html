@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title | default: "Justin Gold" }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  
+  {% feed_meta %}
+  {% seo %}
+
+  <style>
+    :root {
+      --bg-dark: #0a0a12;
+      --bg-monitor: #1a1a2e;
+      --bg-screen: #0d1020;
+      --bg-screen-inner: #080810;
+      --text-primary: #c8d4e8;
+      --text-secondary: #6a7a94;
+      --text-muted: #3d4a5c;
+      --accent: #58a6ff;
+      --accent-glow: #2d7cd6;
+      --accent-bright: #7bb8ff;
+      --accent-dim: rgba(74, 158, 255, 0.3);
+      --green: #3fb950;
+      --yellow: #d29922;
+      --red: #f85149;
+      --purple: #a371f7;
+      --border-monitor: #2a2a45;
+      --border-inner: #1e1e35;
+      --glow-color: rgba(88, 166, 255, 0.4);
+      --scanline-color: rgba(0, 0, 0, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: var(--bg-dark);
+      background-image: radial-gradient(ellipse at center, #12121f 0%, #0a0a12 100%);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    /* CRT Monitor Frame */
+    .crt-monitor {
+      position: relative;
+      width: 100%;
+      max-width: 950px;
+      background: linear-gradient(145deg, #252540 0%, #1a1a2e 50%, #151525 100%);
+      border-radius: 30px;
+      padding: 25px;
+      box-shadow: 
+        0 0 0 2px #3a3a55,
+        0 0 0 4px #1a1a2e,
+        0 25px 50px rgba(0, 0, 0, 0.6),
+        0 0 100px rgba(88, 166, 255, 0.08),
+        inset 0 2px 0 rgba(255, 255, 255, 0.05);
+    }
+
+    .crt-monitor::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 6px;
+      background: linear-gradient(90deg, transparent, #2a2a45, transparent);
+      border-radius: 3px;
+    }
+
+    .power-led {
+      position: absolute;
+      bottom: 12px;
+      right: 30px;
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green), 0 0 20px var(--green);
+      animation: led-pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes led-pulse {
+      0%, 100% { opacity: 1; box-shadow: 0 0 10px var(--green), 0 0 20px var(--green); }
+      50% { opacity: 0.7; box-shadow: 0 0 5px var(--green), 0 0 10px var(--green); }
+    }
+
+    .monitor-brand {
+      position: absolute;
+      bottom: 10px;
+      left: 30px;
+      font-family: 'VT323', monospace;
+      font-size: 0.9rem;
+      color: #3a3a55;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .screen-bezel {
+      background: linear-gradient(180deg, #0f0f1a 0%, #1a1a2e 100%);
+      border-radius: 20px;
+      padding: 15px;
+      box-shadow: 
+        inset 0 2px 10px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 1px #2a2a45;
+    }
+
+    .crt-screen {
+      position: relative;
+      background: var(--bg-screen-inner);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 
+        inset 0 0 80px rgba(88, 166, 255, 0.05),
+        inset 0 0 20px rgba(0, 0, 0, 0.8),
+        0 0 2px #000;
+      animation: flicker 8s infinite;
+    }
+
+    .crt-screen::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        ellipse 120% 150% at 50% 50%,
+        transparent 0%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.15) 80%,
+        rgba(0, 0, 0, 0.4) 100%
+      );
+      pointer-events: none;
+      z-index: 10;
+      border-radius: 15px;
+    }
+
+    .crt-screen::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent 0px,
+        transparent 2px,
+        var(--scanline-color) 2px,
+        var(--scanline-color) 4px
+      );
+      pointer-events: none;
+      z-index: 11;
+      border-radius: 15px;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      92% { opacity: 1; }
+      93% { opacity: 0.97; }
+      94% { opacity: 1; }
+    }
+
+    .screen-glow {
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(
+        135deg,
+        rgba(88, 166, 255, 0.08) 0%,
+        transparent 50%,
+        rgba(88, 166, 255, 0.04) 100%
+      );
+      border-radius: 17px;
+      pointer-events: none;
+      z-index: -1;
+      filter: blur(2px);
+    }
+
+    .glass-reflection {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      width: 90%;
+      height: 30%;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.02) 0%,
+        transparent 100%
+      );
+      border-radius: 10px 10px 50% 50%;
+      pointer-events: none;
+      z-index: 12;
+    }
+
+    /* Terminal Content */
+    .terminal-content {
+      position: relative;
+      height: 520px;
+      padding: 1.5rem;
+      overflow-y: auto;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      z-index: 5;
+      text-shadow: 0 0 8px var(--glow-color);
+    }
+
+    .terminal-content::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .terminal-content::-webkit-scrollbar-track {
+      background: var(--bg-screen-inner);
+      border-radius: 5px;
+    }
+
+    .terminal-content::-webkit-scrollbar-thumb {
+      background: var(--border-monitor);
+      border-radius: 5px;
+      border: 2px solid var(--bg-screen-inner);
+    }
+
+    /* Boot Sequence */
+    .boot-line {
+      opacity: 0;
+      transform: translateY(5px);
+      font-family: 'VT323', monospace;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .boot-line.visible {
+      animation: fadeInUp 0.15s ease forwards;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .timestamp { color: var(--text-muted); }
+    .ok { color: var(--green); text-shadow: 0 0 10px var(--green); }
+    .active { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
+    .connected { color: var(--purple); text-shadow: 0 0 10px var(--purple); }
+
+    /* Neofetch */
+    .neofetch {
+      display: none;
+      margin-top: 1.5rem;
+      opacity: 0;
+    }
+
+    .neofetch.visible {
+      display: flex;
+      gap: 2rem;
+      animation: fadeIn 0.4s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    .ascii-art {
+      color: var(--accent);
+      font-family: 'Share Tech Mono', monospace;
+      font-size: 1.05rem;
+      line-height: 1.25;
+      white-space: pre;
+      text-shadow: 0 0 12px var(--accent), 0 0 25px rgba(88, 166, 255, 0.3);
+      letter-spacing: 1px;
+    }
+
+    .system-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .info-header {
+      color: var(--accent-bright);
+      font-family: 'VT323', monospace;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      text-shadow: 0 0 15px var(--accent);
+    }
+
+    .info-divider {
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+    }
+
+    .info-line {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    .info-line span:first-child {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* Interactive Section */
+    .interactive-section {
+      display: none;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px dashed var(--text-muted);
+    }
+
+    .interactive-section.visible {
+      display: block;
+      animation: fadeIn 0.3s ease forwards;
+    }
+
+    .command-output {
+      margin: 1rem 0;
+      padding: 1rem 1.25rem;
+      background: rgba(88, 166, 255, 0.05);
+      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+      box-shadow: 
+        0 0 20px rgba(88, 166, 255, 0.1),
+        inset 0 0 30px rgba(88, 166, 255, 0.03);
+    }
+
+    .output-history { margin-bottom: 1rem; }
+    .history-entry { margin-bottom: 1.5rem; }
+
+    /* Input Line */
+    .input-line {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
+    }
+
+    .prompt {
+      color: var(--green);
+      white-space: nowrap;
+      text-shadow: 0 0 10px var(--green);
+    }
+
+    .prompt-path {
+      color: var(--accent);
+      text-shadow: 0 0 10px var(--accent);
+    }
+
+    .prompt-symbol { color: var(--text-primary); }
+
+    #command-input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      color: var(--text-primary);
+      font-family: 'VT323', monospace;
+      font-size: 1.2rem;
+      outline: none;
+      caret-color: var(--accent);
+      text-shadow: 0 0 8px var(--glow-color);
+      letter-spacing: 0.5px;
+    }
+
+    /* Suggestions */
+    .suggestions {
+      margin-top: 1.25rem;
+      padding: 1rem 1.25rem;
+      background: rgba(26, 26, 46, 0.6);
+      border-radius: 10px;
+      border: 1px solid var(--border-monitor);
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .suggestions-title {
+      color: var(--text-muted);
+      font-family: 'VT323', monospace;
+      font-size: 1rem;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .suggestion-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.6rem;
+    }
+
+    .suggestion {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.6rem 1rem;
+      background: rgba(88, 166, 255, 0.05);
+      border: 1px solid var(--border-monitor);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.25s;
+    }
+
+    .suggestion:hover {
+      border-color: var(--accent);
+      background: rgba(88, 166, 255, 0.15);
+      box-shadow: 0 0 20px rgba(88, 166, 255, 0.2), inset 0 0 20px rgba(88, 166, 255, 0.05);
+      transform: translateY(-2px);
+    }
+
+    .suggestion-cmd {
+      color: var(--accent);
+      font-family: 'VT323', monospace;
+      font-size: 1.15rem;
+      text-shadow: 0 0 8px var(--glow-color);
+    }
+
+    .suggestion-desc {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    /* Links */
+    .terminal-link {
+      color: var(--accent-bright);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--accent);
+      transition: all 0.2s;
+      text-shadow: 0 0 8px var(--glow-color);
+    }
+
+    .terminal-link:hover {
+      color: #fff;
+      border-bottom-style: solid;
+      text-shadow: 0 0 15px var(--accent);
+    }
+
+    /* Community badges */
+    .community-list {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .community-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(88, 166, 255, 0.1);
+      border: 1px solid var(--border-monitor);
+      border-radius: 25px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-family: 'VT323', monospace;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      transition: all 0.25s;
+    }
+
+    .community-badge:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--green);
+      animation: led-pulse 2s ease-in-out infinite;
+    }
+
+    /* Footer */
+    .footer-hint {
+      position: relative;
+      z-index: 5;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .footer-hint kbd {
+      background: var(--bg-monitor);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border-monitor);
+      font-family: 'VT323', monospace;
+      font-size: 0.85rem;
+      color: var(--accent);
+      box-shadow: 0 2px 0 var(--border-inner);
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      body { padding: 0; }
+
+      .crt-monitor {
+        border-radius: 0;
+        padding: 15px;
+        max-width: 100%;
+      }
+
+      .screen-bezel {
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      .crt-screen { border-radius: 8px; }
+
+      .terminal-content {
+        height: calc(100vh - 120px);
+        padding: 1rem;
+      }
+
+      .neofetch.visible {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+      }
+
+      .ascii-art {
+        font-size: 0.7rem;
+        text-align: center;
+      }
+
+      .system-info { text-align: center; }
+
+      .suggestion-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .monitor-brand, .power-led { display: none; }
+
+      .footer-hint {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="crt-monitor">
+    <div class="monitor-brand">JGold-OS</div>
+    <div class="power-led"></div>
+    
+    <div class="screen-bezel">
+      <div class="crt-screen">
+        <div class="screen-glow"></div>
+        <div class="glass-reflection"></div>
+        
+        <div class="terminal-content" id="terminal">
+          <!-- Boot Sequence -->
+          <div id="boot-sequence">
+            <div class="boot-line"><span class="timestamp">[  0.000000]</span> Booting justingold.io v2.0...</div>
+            <div class="boot-line"><span class="timestamp">[  0.042187]</span> Loading personality modules... <span class="ok">OK</span></div>
+            <div class="boot-line"><span class="timestamp">[  0.089234]</span> Mounting /security/experience... <span class="ok">OK</span></div>
+            <div class="boot-line"><span class="timestamp">[  0.134001]</span> Initializing threat_detection.service... <span class="active">ACTIVE</span></div>
+            <div class="boot-line"><span class="timestamp">[  0.178445]</span> Loading side_quests: gaming, crypto, music... <span class="ok">OK</span></div>
+            <div class="boot-line"><span class="timestamp">[  0.201000]</span> Establishing community links...</div>
+            <div class="boot-line"><span class="timestamp">[  0.223000]</span>    → Simply Cyber: <span class="connected">CONNECTED</span></div>
+            <div class="boot-line"><span class="timestamp">[  0.245000]</span>    → Hack Smarter: <span class="connected">CONNECTED</span></div>
+            <div class="boot-line"><span class="timestamp">[  0.289000]</span> All systems <span class="ok">operational</span>.</div>
+          </div>
+
+          <!-- Neofetch Display -->
+          <div class="neofetch" id="neofetch">
+            <div class="ascii-art">
+      ##   ####    ###   ##      ####
+      ##  ##      ##  ## ##      ##  ##
+      ##  ## ###  ##  ## ##      ##  ##
+ ##   ##  ##  ##  ##  ## ##      ##  ##
+  #####    ####    ###   #####   ####
+            </div>
+            <div class="system-info">
+              <div class="info-header">JUSTIN GOLD</div>
+              <div class="info-divider">────────────────────────</div>
+              <div class="info-line"><span>Role:</span> Blue Team / DFIR</div>
+              <div class="info-line"><span>Focus:</span> Threat Intel, OT/IT Security</div>
+              <div class="info-line"><span>Uptime:</span> 5+ years in the trenches</div>
+              <div class="info-line"><span>Status:</span> Caffeinated & Defending</div>
+              <div class="info-line"><span>Shell:</span> bash</div>
+              <div class="info-line"><span>Location:</span> ~/homelab</div>
+            </div>
+          </div>
+
+          <!-- Interactive Section -->
+          <div class="interactive-section" id="interactive">
+            <div class="output-history" id="output-history"></div>
+            
+            <div class="input-line">
+              <span class="prompt">
+                <span class="prompt-path">justingold@homelab</span>:<span class="prompt-path">~</span><span class="prompt-symbol">$</span>
+              </span>
+              <input type="text" id="command-input" autofocus autocomplete="off" spellcheck="false" placeholder="">
+            </div>
+
+            <div class="suggestions">
+              <div class="suggestions-title">// Available Commands</div>
+              <div class="suggestion-grid">
+                <div class="suggestion" data-cmd="whoami">
+                  <span class="suggestion-cmd">whoami</span>
+                  <span class="suggestion-desc">About me</span>
+                </div>
+                <div class="suggestion" data-cmd="ls">
+                  <span class="suggestion-cmd">ls</span>
+                  <span class="suggestion-desc">List pages</span>
+                </div>
+                <div class="suggestion" data-cmd="cat blog">
+                  <span class="suggestion-cmd">cat blog</span>
+                  <span class="suggestion-desc">Latest posts</span>
+                </div>
+                <div class="suggestion" data-cmd="help">
+                  <span class="suggestion-cmd">help</span>
+                  <span class="suggestion-desc">All commands</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="footer-hint">
+            <span>Type a command or click above</span>
+            <span><kbd>↑</kbd><kbd>↓</kbd> history <kbd>Tab</kbd> autocomplete <kbd>Enter</kbd> run</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Boot sequence animation
+    const bootLines = document.querySelectorAll('.boot-line');
+    const neofetch = document.getElementById('neofetch');
+    const interactive = document.getElementById('interactive');
+    const commandInput = document.getElementById('command-input');
+    const outputHistory = document.getElementById('output-history');
+
+    let bootIndex = 0;
+    const bootDelay = 350;
+
+    function showNextBootLine() {
+      if (bootIndex < bootLines.length) {
+        bootLines[bootIndex].classList.add('visible');
+        bootIndex++;
+        setTimeout(showNextBootLine, bootDelay);
+      } else {
+        setTimeout(() => {
+          neofetch.classList.add('visible');
+          setTimeout(() => {
+            interactive.classList.add('visible');
+            commandInput.focus();
+          }, 500);
+        }, 400);
+      }
+    }
+
+    setTimeout(showNextBootLine, 300);
+
+    // Command definitions with Jekyll-friendly URLs
+    const commands = {
+      whoami: `
+<div class="command-output">
+<strong style="color: var(--accent-bright); font-size: 1.1rem;">Justin Gold</strong> — Cybersecurity Professional
+
+Defender of networks. Builder of security programs. 
+Non-traditional path: Ops → IT Infrastructure → Security.
+
+Currently focused on:
+• Threat Analysis & Intelligence
+• Security Architecture & Hardening  
+• OT/IT Security Integration
+• Security Awareness & Training
+
+After hours: Gaming 🎮 | Crypto 💰 | Music 🎵 | Dog Dad 🐕
+
+<div class="community-list">
+  <a href="https://www.simplycyber.io/" class="community-badge" target="_blank">
+    <span class="badge-dot"></span> Simply Cyber
+  </a>
+  <a href="https://www.hacksmarter.org/" class="community-badge" target="_blank">
+    <span class="badge-dot"></span> Hack Smarter
+  </a>
+</div>
+</div>`,
+
+      ls: `
+<div class="command-output">
+<span style="color: var(--accent)">drwxr-xr-x</span>  <a href="{{ '/about/' | relative_url }}" class="terminal-link">about/</a>
+<span style="color: var(--accent)">drwxr-xr-x</span>  <a href="{{ '/blog/' | relative_url }}" class="terminal-link">blog/</a>
+<span style="color: var(--accent)">drwxr-xr-x</span>  <a href="{{ '/projects/' | relative_url }}" class="terminal-link">projects/</a>
+<span style="color: var(--text-muted)">-rw-r--r--</span>  README.md
+<span style="color: var(--green)">-rwxr-xr-x</span>  <a href="https://www.linkedin.com/in/justinit/" class="terminal-link" target="_blank">connect.sh</a>
+</div>`,
+
+      'cat blog': `
+<div class="command-output">
+<strong style="color: var(--accent-bright);">📄 Latest Posts</strong>
+
+{% for post in site.posts limit:3 %}
+<a href="{{ post.url | relative_url }}" class="terminal-link">{{ post.title }}</a>
+<span style="color: var(--text-muted)">{{ post.date | date: "%Y-%m-%d" }} • {{ post.category }} {% if post.tags %}• {% for tag in post.tags %}#{{ tag }} {% endfor %}{% endif %}</span>
+
+{% endfor %}
+Type <span style="color: var(--accent)">ls blog/</span> for all posts →
+</div>`,
+
+      help: `
+<div class="command-output">
+<strong style="color: var(--accent-bright);">Available Commands</strong>
+
+<span style="color: var(--accent)">whoami</span>      Who is Justin Gold?
+<span style="color: var(--accent)">ls</span>          List site pages
+<span style="color: var(--accent)">cat blog</span>    Show recent blog posts
+<span style="color: var(--accent)">cat about</span>   Full bio & background
+<span style="color: var(--accent)">clear</span>       Clear terminal
+<span style="color: var(--accent)">help</span>        Show this message
+
+<span style="color: var(--text-muted)">// Click any [link] to navigate</span>
+</div>`,
+
+      'cat about': `
+<div class="command-output">
+<strong style="color: var(--accent-bright);">Background</strong>
+
+Hands-on experience in SOC operations, incident response, 
+digital forensics, and security program implementation.
+
+Non-traditional path: started in operations and IT infrastructure 
+before moving into dedicated security roles. This gives me a 
+practical, operations-first approach to defending environments.
+
+<strong style="color: var(--accent-bright);">Experience Highlights</strong>
+• Barricade Cyber Solutions — Threat monitoring, IR, DFIR
+• JMWSC — Built security functions for water utility, OT/IT dashboards
+
+<strong style="color: var(--accent-bright);">Certifications</strong>
+• Security+ SY0-601
+
+<a href="{{ '/about/' | relative_url }}" class="terminal-link">→ Full about page</a>
+</div>`,
+
+      clear: 'CLEAR',
+      '': ''
+    };
+
+    // Command history
+    let commandHistory = [];
+    let historyIndex = -1;
+
+    function processCommand(cmd) {
+      const trimmedCmd = cmd.trim().toLowerCase();
+      
+      if (trimmedCmd === '') return;
+      
+      commandHistory.unshift(trimmedCmd);
+      historyIndex = -1;
+
+      const entry = document.createElement('div');
+      entry.className = 'history-entry';
+      
+      const cmdLine = `<div class="input-line" style="margin-bottom: 0.5rem;">
+        <span class="prompt">
+          <span class="prompt-path">justingold@homelab</span>:<span class="prompt-path">~</span><span class="prompt-symbol">$</span>
+        </span>
+        <span>${cmd}</span>
+      </div>`;
+
+      if (trimmedCmd === 'clear') {
+        outputHistory.innerHTML = '';
+        return;
+      }
+
+      let output = commands[trimmedCmd];
+      
+      if (!output) {
+        output = `<div class="command-output" style="border-left-color: var(--yellow)">
+<span style="color: var(--yellow)">Command not found:</span> ${cmd}
+Type <span style="color: var(--accent)">help</span> for available commands.
+</div>`;
+      }
+
+      entry.innerHTML = cmdLine + output;
+      outputHistory.appendChild(entry);
+      
+      const terminal = document.getElementById('terminal');
+      terminal.scrollTop = terminal.scrollHeight;
+    }
+
+    commandInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        processCommand(commandInput.value);
+        commandInput.value = '';
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (historyIndex < commandHistory.length - 1) {
+          historyIndex++;
+          commandInput.value = commandHistory[historyIndex];
+        }
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (historyIndex > 0) {
+          historyIndex--;
+          commandInput.value = commandHistory[historyIndex];
+        } else {
+          historyIndex = -1;
+          commandInput.value = '';
+        }
+      } else if (e.key === 'Tab') {
+        e.preventDefault();
+        const val = commandInput.value.toLowerCase();
+        const cmds = Object.keys(commands).filter(c => c && c.startsWith(val));
+        if (cmds.length === 1) {
+          commandInput.value = cmds[0];
+        }
+      }
+    });
+
+    document.querySelectorAll('.suggestion').forEach(el => {
+      el.addEventListener('click', () => {
+        const cmd = el.dataset.cmd;
+        commandInput.value = cmd;
+        processCommand(cmd);
+        commandInput.value = '';
+        commandInput.focus();
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('a') && !e.target.closest('button')) {
+        commandInput.focus();
+      }
+    });
+  </script>
+</body>
+</html>
